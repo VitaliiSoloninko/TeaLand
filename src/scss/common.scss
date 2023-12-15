@@ -1,0 +1,47 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.title {
+	// .title__label
+
+	&__label {
+		text-transform: uppercase;
+		color: $brownColor;
+		line-height: 115%; /* 23/20 */
+		letter-spacing: 4px;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 27, 20);
+		}
+	}
+	// .title__value
+	&__value {
+		font-family: Philosopher;
+		color: $greenColor;
+		font-size: toRem(50);
+		font-weight: 700;
+		line-height: 112%; /* 56/50 */
+	}
+	// .title__value--big
+	&__value--big {
+		font-size: toRem(80);
+	}
+}
+.text {
+	font-weight: 300;
+	line-height: 1.5;
+}
+.button {
+	color: #fff;
+	border: toRem(1) solid $greenColor;
+	background-color: $greenColor;
+	line-height: normal;
+	padding: toRem(11) toRem(50);
+	text-align: center;
+	min-height: toRem(50);
+	border-radius: toRem(25);
+	transition: all 0.5s;
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #fff;
+			color: $greenColor;
+		}
+	}
+}

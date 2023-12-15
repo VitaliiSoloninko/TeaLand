@@ -1,0 +1,33 @@
+//====================================================================================================
+.main {
+	padding-top: toRem(200);
+	// .main__container
+	&__container {
+		@include adaptiveValue("padding-top", 144, 30);
+		@include adaptiveValue("padding-bottom", 250, 30);
+	}
+	// .main__content
+	&__content {
+	}
+	// .main__title
+	&__title {
+		max-width: toRem(780);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 27, 20);
+		}
+	}
+	// .main__text
+	&__text {
+		max-width: toRem(660);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 49, 20);
+		}
+	}
+	// .main__button
+	&__button {
+	}
+	// .main__image
+	&__image {
+	}
+}
+//====================================================================================================

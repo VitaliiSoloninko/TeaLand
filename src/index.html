@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Tea Land"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="main">
+				<div class="main__container">
+					<div class="main__content">
+						<div class="main__title title">
+							<div class="title__label">tealand</div>
+							<h1 class="title__value title__value--big">Fresh from our tea gardens to your cup</h1>
+							<div class="main__text text">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo enim sit amet magna
+									semper
+									lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo enim sit amet.
+								</p>
+							</div>
+							<button class="main__button button" type="submit" class="button">Explore</button>
+						</div>
+					</div>
+					<div class="main__image">
+						<img src="@img/background.jpg" alt="Background">
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>@import

@@ -1,8 +1,8 @@
 // Заголовки, загальні БЕМ блоки та інше...
 .title {
 	// .title__label
-
 	&__label {
+		@include adaptiveValue("font-size", 20, 16);
 		text-transform: uppercase;
 		color: $brownColor;
 		line-height: 115%; /* 23/20 */
@@ -21,12 +21,13 @@
 	}
 	// .title__value--big
 	&__value--big {
-		font-size: toRem(80);
+		@include adaptiveValue("font-size", 80, 40);
 	}
 }
 .text {
 	font-weight: 300;
 	line-height: 1.5;
+	@include adaptiveValue("font-size", 20, 18);
 }
 .button {
 	color: #fff;
@@ -38,6 +39,9 @@
 	min-height: toRem(50);
 	border-radius: toRem(25);
 	transition: all 0.5s;
+	@media (max-width: $mobileSmall) {
+		width: 100%;
+	}
 	@media (any-hover: hover) {
 		&:hover {
 			background-color: #fff;

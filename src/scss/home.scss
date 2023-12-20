@@ -1,20 +1,20 @@
 //====================================================================================================
 .main {
-	padding-top: toRem(200);
+	position: relative;
 	// .main__container
 	&__container {
-		@include adaptiveValue("padding-top", 144, 30);
+		@include adaptiveValue("padding-top", 170, 75);
 		@include adaptiveValue("padding-bottom", 250, 30);
 	}
-	// .main__content
-	&__content {
+	// .main__body
+	&__body {
+		@include adaptiveValue("padding-top", 144, 75);
+		position: relative;
+		z-index: 2;
 	}
 	// .main__title
 	&__title {
-		max-width: toRem(780);
-		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 27, 20);
-		}
+		max-width: toRem(700);
 	}
 	// .main__text
 	&__text {
@@ -26,8 +26,19 @@
 	// .main__button
 	&__button {
 	}
-	// .main__image
+	// .main__image-ibg
 	&__image {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		object-position: right;
+	}
+}
+.title__value {
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 27, 20);
 	}
 }
 //====================================================================================================

@@ -40,7 +40,7 @@
 		position: relative;
 		z-index: 5;
 		justify-content: flex-start;
-		@include adaptiveValue("width", 169, 123);
+		@include adaptiveValue("width", 169, 100);
 		img {
 			max-width: 100%;
 		}
@@ -68,7 +68,7 @@
 				content: "";
 				position: fixed;
 				width: 100%;
-				@include adaptiveValue("height", 170, 120);
+				@include adaptiveValue("height", 170, 113);
 				top: 0;
 				left: 100%; // спочатку було 0
 				z-index: 2;
@@ -94,6 +94,7 @@
 			justify-content: flex-start;
 			align-items: flex-end;
 			flex-direction: column;
+			gap: toRem(25);
 			&:not(:last-child) {
 				margin-bottom: toRem(30);
 			}

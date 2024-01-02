@@ -47,7 +47,7 @@
 //====================================================================================================
 .advantages {
 	@include adaptiveValue("padding-top", 65, 30);
-	@include adaptiveValue("padding-bottom", 100, 30);
+	@include adaptiveValue("padding-bottom", 50, 15);
 	&__container {
 		display: grid;
 		align-items: center;
@@ -80,5 +80,55 @@
 	&__text {
 	}
 	&__button {
+	}
+}
+//========================================================================================================================================================
+.why {
+	@include adaptiveValue("padding-top", 50, 15);
+	@include adaptiveValue("padding-bottom", 50, 15);
+	&__container {
+		max-width: toRem(1284);
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 20);
+		}
+	}
+	&__label {
+	}
+	&__title {
+	}
+	&__text {
+		text-align: center;
+		@media (min-width: $tablet) {
+			max-width: toRem(908);
+		}
+	}
+	&__items {
+		display: flex;
+		align-items: end;
+		justify-content: space-between;
+		gap: toRem(30);
+		flex-wrap: wrap;
+		@media (max-width: $tablet) {
+			justify-content: center;
+		}
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		@include adaptiveValue("gap", 51, 20);
+	}
+}
+.item-why {
+	&__image {
+		width: toRem(112);
+	}
+	&__title {
 	}
 }

@@ -23,6 +23,9 @@
 	&__value--big {
 		@include adaptiveValue("font-size", 80, 42);
 	}
+	&__value--small {
+		@include adaptiveValue("font-size", 30, 24);
+	}
 }
 .text {
 	font-weight: 300;

@@ -48,34 +48,37 @@
 .advantages {
 	@include adaptiveValue("padding-top", 65, 30);
 	@include adaptiveValue("padding-bottom", 100, 30);
-	// .advantages__container
 	&__container {
-		display: flex;
+		display: grid;
 		align-items: center;
+		justify-content: center;
+		grid-template-columns: repeat(2, 1fr);
+		@include adaptiveValue("gap", 70, 30);
+		@media (max-width: $tablet) {
+			grid-template-columns: auto;
+		}
 	}
-	// .advantages__image
 	&__image {
-		flex: 1 1 50%;
-		padding-right: toRem(70);
+		justify-self: end;
+		img {
+			max-width: 100%;
+		}
+		@media (max-width: $tablet) {
+			justify-self: center;
+			order: 2;
+		}
 	}
-	// .advantages__content
 	&__content {
-		flex: 1 1 50%;
+		@media (max-width: $tablet) {
+			order: 1;
+		}
 	}
-}
-.title {
-	// .title__label
 	&__label {
 	}
-	// .title__value
-	&__value {
+	&__title {
 	}
-}
-.main {
-	// .main__text
 	&__text {
 	}
-	// .main__button
 	&__button {
 	}
 }

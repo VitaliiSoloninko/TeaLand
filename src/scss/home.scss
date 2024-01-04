@@ -132,3 +132,45 @@
 	&__title {
 	}
 }
+//========================================================================================================================================================
+.brends {
+	@include adaptiveValue("padding-top", 50, 15);
+	@include adaptiveValue("padding-bottom", 50, 15);
+	&__container {
+	}
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__title {
+	}
+	&__arrows {
+		display: flex;
+		gap: toRem(22);
+	}
+	&__slider {
+	}
+}
+.slider-brends {
+	&__slider {
+	}
+	&__wrapper {
+	}
+	&__slide {
+	}
+	&__image {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 38, 20);
+		}
+	}
+	&__footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__text {
+	}
+	&__card {
+	}
+}

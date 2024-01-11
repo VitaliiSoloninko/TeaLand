@@ -2,7 +2,6 @@ import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 import "../../scss/base/swiper.scss";
 
-
 if (document.querySelector('.slider-brends')) {
 	new Swiper('.slider-brends', {
 		modules: [Navigation],

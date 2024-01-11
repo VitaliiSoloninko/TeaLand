@@ -2,26 +2,18 @@ import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 import "../../scss/base/swiper.scss";
 
+
 if (document.querySelector('.slider-brends')) {
 	new Swiper('.slider-brends', {
-		modules: [Navigation, Pagination],
+		modules: [Navigation],
 		observer: true,
 		observeParents: true,
-		slidesPerView: 3,
+		slidesPerView: 3.5,
 		spaceBetween: 32,
 		speed: 800,
 		loop: true,
 		watchOverflow: true,
-		// Dotts
-		pagination: {
-			el: '.slider-brends',
-			clickable: true,
-		},
-		// Arrows
-		navigation: {
-			nextEl: '.slider-brends .slider-arrow_next',
-			prevEl: '.slider-brends .slider-arrow_prev',
-		},
+		/*
 		breakpoints: {
 			// when window width is >= 320px
 			320: {
@@ -35,16 +27,17 @@ if (document.querySelector('.slider-brends')) {
 			},
 			// when window width is >= 992px
 			992: {
-				slidesPerView: 3,
+				slidesPerView: 1,
 				spaceBetween: 32
 			}
 		}
+		*/
 	});
 }
 
 
 
-// Скролл на базі слайдера
+// Скролл меню на базі слайдера
 function initSlidersScroll() {
 	let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
 	if (sliderScrollItems.length > 0) {

@@ -147,27 +147,24 @@
 	}
 	&__arrows {
 		display: flex;
-		gap: toRem(22);
+		gap: toRem(23);
 	}
 	&__slider {
 	}
 }
 .slider-brends {
-	&__slider {
-	}
-	&__wrapper {
-	}
 	&__slide {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(33);
 	}
 	&__image {
-		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 38, 20);
-		}
+		max-width: 100%;
 	}
-	&__footer {
+	&__content {
 		display: flex;
-		align-items: center;
 		justify-content: space-between;
+		align-items: center;
 	}
 	&__text {
 	}

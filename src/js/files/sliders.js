@@ -5,17 +5,34 @@ import "../../scss/base/swiper.scss";
 if (document.querySelector('.swiper')) {
 	new Swiper('.swiper', {
 		modules: [Navigation],
-		observer: true,
-		observeParents: true,
-		slidesPerView: 3,
-		spaceBetween: 32,
-		speed: 800,
-		loop: true,
+		observer: true, // спостерігач
+		observeParents: true, // спостеріагти за батьками
+		spaceBetween: 32, // відстань між слайдами
+		speed: 800, // швидкість
+		loop: true, // циклічно
 		watchOverflow: true,
 		navigation: {
 			nextEl: '.slider-arrows .slider-arrow_next',
 			prevEl: '.slider-arrows .slider-arrow_prev',
 		},
+		breakpoints: {
+			1280: {
+				slidesPerView: 3.9,
+				spaceBetween: 25
+			},
+			768: {
+				slidesPerView: 2.9,
+				spaceBetween: 25
+			},
+			480: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+			320: {
+				slidesPerView: 1.1,
+				spaceBetween: 10
+			}
+		}
 	});
 }
 

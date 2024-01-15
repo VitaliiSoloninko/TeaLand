@@ -159,7 +159,16 @@
 		gap: toRem(33);
 	}
 	&__image {
-		max-width: 100%;
+		position: relative;
+		padding: 0px 0px 133% 0px;
+	}
+	&__image img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		top: 0;
+		left: 0;
 	}
 	&__content {
 		display: flex;

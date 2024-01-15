@@ -17,11 +17,11 @@ if (document.querySelector('.swiper')) {
 		},
 		breakpoints: {
 			1280: {
-				slidesPerView: 3.9,
+				slidesPerView: 4,
 				spaceBetween: 25
 			},
 			768: {
-				slidesPerView: 2.9,
+				slidesPerView: 3,
 				spaceBetween: 25
 			},
 			480: {
@@ -35,35 +35,3 @@ if (document.querySelector('.swiper')) {
 		}
 	});
 }
-
-
-/*
-// Скролл меню на базі слайдера
-function initSlidersScroll() {
-	let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
-	if (sliderScrollItems.length > 0) {
-		for (let index = 0; index < sliderScrollItems.length; index++) {
-			const sliderScrollItem = sliderScrollItems[index];
-			const sliderScrollBar = sliderScrollItem.querySelector('.swiper-scrollbar');
-			const sliderScroll = new Swiper(sliderScrollItem, {
-				observer: true,
-				observeParents: true,
-				direction: 'vertical',
-				slidesPerView: 'auto',
-				freeMode: {
-					enabled: true,
-				},
-				scrollbar: {
-					el: sliderScrollBar,
-					draggable: true,
-					snapOnRelease: false
-				},
-				mousewheel: {
-					releaseOnEdges: true,
-				},
-			});
-			sliderScroll.scrollbar.updateSize();
-		}
-	}
-}
-*/

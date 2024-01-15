@@ -18,6 +18,9 @@
 		@include adaptiveValue("font-size", 50, 36);
 		font-weight: 700;
 		line-height: 112%; /* 56/50 */
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 27, 20);
+		}
 	}
 	// .title__value--big
 	&__value--big {
@@ -56,6 +59,21 @@
 .slider-arrows {
 }
 .slider-arrow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: toRem(50);
+	width: toRem(50);
+	border-radius: 50%;
+	transition: background-color 0.4s;
+	@media (max-width: $mobile) {
+		background-color: #cfd4af;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #d2d8a8;
+		}
+	}
 	&_prev {
 		img {
 			transform: rotate(180deg);

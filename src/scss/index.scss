@@ -202,3 +202,76 @@
 	}
 }
 //========================================================================================================================================================
+.carte {
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		@include adaptiveValue("gap", 90, 20, 0, $containerWidth, 767.98);
+		@media (max-width: $mobile) {
+			grid-template-columns: auto;
+			gap: toRem(0);
+		}
+	}
+	&__body {
+		@include adaptiveValue("padding-left", 360, 0, 0, $containerWidth, 997.98);
+	}
+	&__label {
+	}
+	&__title {
+	}
+	&__items {
+	}
+	&__item {
+	}
+	&__image {
+		justify-self: end;
+		img {
+			max-width: 100%;
+		}
+		@media (max-width: $mobile) {
+			margin-left: toRem(-15);
+			margin-right: toRem(-15);
+			justify-self: center;
+		}
+	}
+	&__background {
+	}
+}
+.item-carte {
+	&__content {
+		display: flex;
+		gap: toRem(5);
+		&:not(:last-child) {
+			margin-bottom: toRem(5);
+		}
+	}
+	&__name {
+		font-weight: 400;
+		@include adaptiveValue("font-size", 20, 18);
+		text-transform: capitalize;
+	}
+	&__line {
+		flex: 1 1 auto;
+		border-bottom: 1px solid #dee2bd;
+	}
+	&__price {
+	}
+	&__description {
+		font-weight: 300;
+		line-height: 1.5;
+		font-size: toRem(16);
+		text-transform: capitalize;
+		@include adaptiveValue("margin-bottom", 40, 20);
+	}
+}
+.price-carte {
+	display: flex;
+	@include adaptiveValue("font-size", 20, 18);
+	&__currency {
+		color: $brownColor;
+	}
+	&__value {
+		color: $brownColor;
+	}
+}

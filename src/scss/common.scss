@@ -14,6 +14,7 @@
 	// .title__value
 	&__value {
 		font-family: Philosopher;
+		text-transform: capitalize;
 		color: $greenColor;
 		@include adaptiveValue("font-size", 50, 36);
 		font-weight: 700;

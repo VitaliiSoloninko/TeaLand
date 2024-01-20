@@ -15,6 +15,9 @@
 	// .main__title
 	&__title {
 		max-width: toRem(780);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 27, 20);
+		}
 	}
 	// .main__text
 	&__text {
@@ -42,7 +45,7 @@
 //====================================================================================================
 .advantages {
 	@include adaptiveValue("padding-top", 65, 30);
-	@include adaptiveValue("padding-bottom", 50, 15);
+	@include adaptiveValue("padding-bottom", 50, 20);
 	&__container {
 		display: grid;
 		align-items: center;
@@ -71,6 +74,10 @@
 	&__label {
 	}
 	&__title {
+		max-width: toRem(524);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 36, 20);
+		}
 	}
 	&__text {
 	}
@@ -79,8 +86,8 @@
 }
 //========================================================================================================================================================
 .why {
-	@include adaptiveValue("padding-top", 50, 15);
-	@include adaptiveValue("padding-bottom", 50, 15);
+	@include adaptiveValue("padding-top", 50, 20);
+	@include adaptiveValue("padding-bottom", 50, 20);
 	&__container {
 		max-width: toRem(1284);
 	}
@@ -95,6 +102,9 @@
 	&__label {
 	}
 	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 36, 20);
+		}
 	}
 	&__text {
 		text-align: center;
@@ -129,8 +139,8 @@
 }
 //========================================================================================================================================================
 .brends {
-	@include adaptiveValue("padding-top", 50, 15);
-	@include adaptiveValue("padding-bottom", 50, 15);
+	@include adaptiveValue("padding-top", 50, 20);
+	@include adaptiveValue("padding-bottom", 50, 20);
 	&__container {
 	}
 	&__content {
@@ -144,6 +154,9 @@
 		}
 	}
 	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 36, 20);
+		}
 	}
 	&__arrows {
 		display: flex;
@@ -203,6 +216,8 @@
 }
 //========================================================================================================================================================
 .carte {
+	@include adaptiveValue("padding-top", 50, 20);
+	@include adaptiveValue("padding-bottom", 50, 20);
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -219,6 +234,9 @@
 	&__label {
 	}
 	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 45, 20);
+		}
 	}
 	&__items {
 	}
@@ -275,3 +293,64 @@
 		color: $brownColor;
 	}
 }
+//========================================================================================================================================================
+.about {
+	@include adaptiveValue("padding-top", 50, 20);
+	@include adaptiveValue("padding-bottom", 50, 20);
+	&__container {
+	}
+	&__title {
+		max-width: toRem(715);
+		margin: 0 auto;
+		text-align: center;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 90, 15);
+		}
+	}
+	&__body {
+		display: grid;
+		grid-template-columns: 1.2fr 1fr;
+		@include adaptiveValue("gap", 81, 20, 0, $containerWidth, 767.98);
+		align-items: center;
+		@media (max-width: $mobile) {
+			grid-template-columns: auto;
+			gap: toRem(0);
+		}
+	}
+	&__images {
+		display: flex;
+		@include adaptiveValue("gap", 45, 10);
+		@media (max-width: $mobile) {
+			order: 2;
+		}
+	}
+	&__image {
+		text-align: center;
+		img {
+			max-width: 100%;
+		}
+	}
+	&__items {
+		@media (max-width: $mobile) {
+			order: 1;
+		}
+		@media (max-width: $mobile) {
+			@include adaptiveValue("margin-bottom", 20, 15);
+		}
+	}
+	&__item {
+		@media (min-width: $tablet) {
+			max-width: toRem(555);
+		}
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 30, 15);
+		}
+	}
+}
+.item-about {
+	&__title {
+	}
+	&__text {
+	}
+}
+//========================================================================================================================================================

@@ -18,23 +18,20 @@
 		color: $greenColor;
 		@include adaptiveValue("font-size", 50, 36);
 		font-weight: 700;
-		line-height: 112%; /* 56/50 */
-		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 27, 20);
-		}
+		line-height: normal;
 	}
 	// .title__value--big
 	&__value--big {
 		@include adaptiveValue("font-size", 80, 42);
 	}
 	&__value--small {
-		@include adaptiveValue("font-size", 30, 24);
+		@include adaptiveValue("font-size", 30, 22);
 	}
 }
 .text {
 	font-weight: 300;
 	line-height: 1.5;
-	@include adaptiveValue("font-size", 20, 18);
+	@include adaptiveValue("font-size", 20, 17);
 	&:not(:last-child) {
 		@include adaptiveValue("margin-bottom", 50, 20);
 	}

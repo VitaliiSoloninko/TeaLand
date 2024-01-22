@@ -32,9 +32,6 @@
 	font-weight: 300;
 	line-height: 1.5;
 	@include adaptiveValue("font-size", 20, 17);
-	&:not(:last-child) {
-		@include adaptiveValue("margin-bottom", 50, 20);
-	}
 }
 .button {
 	color: #fff;

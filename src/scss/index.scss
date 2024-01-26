@@ -439,17 +439,24 @@
 	@include adaptiveValue("padding-top", 140, 40);
 	@include adaptiveValue("padding-bottom", 26, 20);
 	&__container {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 100, 30);
+		}
 	}
 	&__body {
-		max-width: toRem(1650);
-		margin: 0 auto;
+		position: relative;
+		@media (any-hover: none) {
+			// тільки для мобільних, тач
+			overflow: auto; // включення горизогтального скролу
+			-webkit-overflow-scrolling: touch; // плавний скрол
+		}
 	}
 	&__header {
 		display: flex;
-		gap: toRem(20);
-		align-items: end;
 		justify-content: space-between;
-		@media (max-width: $mobile) {
+		align-items: flex-end;
+		gap: toRem(20);
+		@media (max-width: $tablet) {
 			flex-direction: column;
 			align-items: start;
 		}
@@ -462,32 +469,32 @@
 	&__label {
 	}
 	&__button {
-		align-items: flex-end;
-		@media (max-width: $mobileSmall) {
-			max-width: 100%;
-		}
-	}
-	&__items {
-		display: grid;
-		grid-template-columns: auto;
-		grid-auto-flow: column;
-		align-items: center;
-		gap: toRem(16);
-		@media (any-hover: hover) {
-			justify-content: center;
-		}
 	}
 	&__rows {
 	}
 	&__row {
 	}
-}
-.row-gallery {
+	&__content {
+		max-width: toRem(1650);
+	}
+	&__items {
+		display: grid;
+		grid-template-columns: auto;
+		grid-auto-flow: column; // щоб були колонки по всій ширині
+		align-items: center;
+		@include adaptiveValue("gap", 26, 10);
+		@media (any-hover: hover) {
+			&:hover {
+				justify-content: center; // вирівняти контент по середині
+			}
+		}
+	}
 	&__item {
 		@media (any-hover: hover) {
 			img {
-				transition: all 0.8s ease 0s;
+				transition: all 0.8s;
 				filter: grayscale(1);
+				max-width: 100%;
 			}
 			&:hover {
 				img {
@@ -496,8 +503,12 @@
 			}
 		}
 	}
-	&__item img {
-		max-width: 100%;
+}
+.row-gallery {
+	&__image {
+		img {
+			max-width: 100%;
+		}
 	}
 }
 .row-gallery--top {
@@ -507,12 +518,8 @@
 }
 .row-gallery--center {
 	display: flex;
-	@include adaptiveValue("margin-bottom", 53, 10);
 	align-items: center;
 	justify-content: space-between;
-	&:not(:last-child) {
-		@include adaptiveValue("margin-bottom", 100, 10);
-	}
+	@include adaptiveValue("gap", 53, 10);
 }
-.row-gallery--bottom {
-}
+//========================================================================================================================================================

@@ -27,6 +27,9 @@
 	&__value--small {
 		@include adaptiveValue("font-size", 30, 22);
 	}
+	&__value--supersmall {
+		font-size: toRem(20);
+	}
 }
 .text {
 	font-weight: 300;

@@ -3,6 +3,7 @@
 	background-color: #dee2bd;
 	@include adaptiveValue("padding-top", 70, 20);
 	&__container {
+		@include adaptiveValue("margin-bottom", 60, 30);
 	}
 	&__body {
 	}
@@ -11,13 +12,22 @@
 		grid-template-columns: 37% 26% 37%;
 		align-items: center;
 		justify-items: center;
-		gap: toRem(15);
+		gap: toRem(30);
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: auto;
+		}
 	}
 	&__column {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		&--logo {
+			grid-row-start: span 2;
+		}
 	}
 	&__title {
 		&:not(:last-child) {
@@ -54,6 +64,7 @@
 	&__item {
 		font-size: toRem(16);
 		text-transform: capitalize;
+		text-align: center;
 	}
 }
 .social {

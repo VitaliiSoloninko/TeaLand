@@ -523,3 +523,29 @@
 	@include adaptiveValue("gap", 53, 10);
 }
 //========================================================================================================================================================
+.go-top {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: toRem(60);
+	width: toRem(60);
+	right: toRem(70);
+	top: 70%;
+	cursor: pointer;
+	padding: toRem(15);
+	border-radius: 50%;
+	fill: #eef0dc;
+	border: toRem(3) solid $greenColor;
+	transition: all 0.3s;
+	/* display: none; */
+	@media (max-width: $mobile) {
+		background-color: #cfd4af;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #d2d8a8;
+			border: toRem(0);
+		}
+	}
+}

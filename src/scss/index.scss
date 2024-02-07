@@ -528,24 +528,27 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: toRem(60);
-	width: toRem(60);
-	right: toRem(70);
-	top: 70%;
+	@include adaptiveValue("height", 60, 50);
+	@include adaptiveValue("width", 60, 50);
+	@include adaptiveValue("right", 75, 15);
+	@include adaptiveValue("bottom", 100, 25);
+	//top: 70%;
 	cursor: pointer;
-	padding: toRem(15);
+	padding: toRem(5);
 	border-radius: 50%;
 	fill: #eef0dc;
-	border: toRem(3) solid $greenColor;
+	border: toRem(3) solid rgb(125, 128, 106, 0.6);
 	transition: all 0.3s;
-	/* display: none; */
-	@media (max-width: $mobile) {
-		background-color: #cfd4af;
+	display: none;
+	&--show {
+		display: block;
 	}
 	@media (any-hover: hover) {
 		&:hover {
+			border: toRem(3) solid #d2d8a8;
 			background-color: #d2d8a8;
 			border: toRem(0);
 		}
 	}
 }
+//========================================================================================================================================================

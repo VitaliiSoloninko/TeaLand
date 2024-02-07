@@ -2,7 +2,7 @@
 import { isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js";
-
+//========================================================================================================================================================
 // Gallery movies
 const furniture = document.querySelector('.gallery__body');
 if (furniture && !isMobile.any()) {
@@ -38,15 +38,23 @@ if (furniture && !isMobile.any()) {
 	});
 }
 //========================================================================================================================================================
-
-// button go-top
-const goTopBtn = document.querySelector(".go-top");
-goTopBtn.addEventListener("click", goTop);
-
-function goTop() {
-	if (window.pageYOffset > 0) {
-		window.scrollBy(0, -40);
-		setTimeout(goTop, 0);
+// Button go-top
+const goTopBtn = document.querySelector(".go-top"); // константа зчитує кнопку по класу
+goTopBtn.addEventListener("click", goTop); // обробник подій по кліку і викликає функцію goTop
+window.addEventListener("scroll", trackScroll); // обробник подій scroll і викликає функцію trackScroll
+function trackScroll() {
+	const offset = window.pageYOffset; // перевіряємо наскільки глибоко пішли вниз
+	const coords = document.documentElement.clientHeight; // зрозуміти висоту 1 екрану
+	if (offset > 6 * coords) { // якщо висота прокрутки більша за 6 екранів
+		goTopBtn.classList.add("go-top--show"); // до кнопки додаємо клас go-top--show
+	} else { // інакше
+		goTopBtn.classList.remove("go-top--show");	// клас прибираємо
+	}
+}
+function goTop() { // обявляємо функцію goTop
+	if (window.pageYOffset > 0) { // якщо не початок сторінки 0
+		window.scrollBy(0, -40); // скролимо наверх 0, -40 швидкість скролу, чим менша тим швидше 
+		setTimeout(goTop, 0); // входимо в рекурсію, визиваємо функцію goTop
 	}
 }
 

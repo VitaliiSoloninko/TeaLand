@@ -44,6 +44,7 @@
 }
 //====================================================================================================
 .advantages {
+	background-color: $bgColor;
 	@include adaptiveValue("padding-top", 65, 30);
 	@include adaptiveValue("padding-bottom", 50, 20);
 	&__container {
@@ -86,6 +87,7 @@
 }
 //========================================================================================================================================================
 .why {
+	background-color: $bgColor;
 	@include adaptiveValue("padding-top", 50, 20);
 	@include adaptiveValue("padding-bottom", 50, 20);
 	&__container {
@@ -139,6 +141,7 @@
 }
 //========================================================================================================================================================
 .brends {
+	background-color: $bgColor;
 	@include adaptiveValue("padding-top", 50, 20);
 	@include adaptiveValue("padding-bottom", 50, 20);
 	&__container {
@@ -216,6 +219,7 @@
 }
 //========================================================================================================================================================
 .carte {
+	background-color: $bgColor;
 	@include adaptiveValue("padding-top", 50, 20);
 	@include adaptiveValue("padding-bottom", 50, 20);
 	&__container {
@@ -295,6 +299,7 @@
 }
 //========================================================================================================================================================
 .about {
+	background-color: $bgColor;
 	@include adaptiveValue("padding-top", 50, 20);
 	@include adaptiveValue("padding-bottom", 50, 20);
 	&__container {
@@ -355,6 +360,7 @@
 }
 //========================================================================================================================================================
 .bestseller {
+	background-color: $bgColor;
 	@include adaptiveValue("padding-top", 50, 20);
 	@include adaptiveValue("padding-bottom", 70, 20);
 	background-color: #eef0dc;
@@ -436,6 +442,7 @@
 }
 //========================================================================================================================================================
 .gallery {
+	background-color: $bgColor;
 	@include adaptiveValue("padding-top", 140, 40);
 	@include adaptiveValue("padding-bottom", 26, 20);
 	&__container {

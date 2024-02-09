@@ -115,6 +115,9 @@
 			font-weight: 500;
 			color: #fff;
 		}
+		&._navigator-active {
+			text-decoration: underline;
+		}
 	}
 }
 .actions-header {

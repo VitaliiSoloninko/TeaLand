@@ -219,6 +219,7 @@
 }
 //========================================================================================================================================================
 .carte {
+	position: relative;
 	background-color: $bgColor;
 	@include adaptiveValue("padding-top", 50, 20);
 	@include adaptiveValue("padding-bottom", 50, 20);
@@ -258,6 +259,20 @@
 		}
 	}
 	&__background {
+	}
+	&__back--image {
+		position: absolute;
+		z-index: 5;
+		bottom: toRem(-200);
+		left: 0;
+		img {
+			@include adaptiveValue("width", 265, 100);
+			max-height: 100%;
+			object-fit: cover;
+			@media (max-width: em(1400)) {
+				opacity: 0.8;
+			}
+		}
 	}
 }
 .item-carte {
@@ -299,6 +314,7 @@
 }
 //========================================================================================================================================================
 .about {
+	position: relative;
 	background-color: $bgColor;
 	@include adaptiveValue("padding-top", 50, 20);
 	@include adaptiveValue("padding-bottom", 50, 20);
@@ -349,6 +365,20 @@
 		}
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 30, 15);
+		}
+	}
+	&__back--image {
+		position: absolute;
+		z-index: 5;
+		bottom: 0;
+		right: 0;
+		img {
+			@include adaptiveValue("width", 265, 100);
+			max-height: 100%;
+			object-fit: cover;
+			@media (max-width: em(1400)) {
+				opacity: 0.8;
+			}
 		}
 	}
 }
